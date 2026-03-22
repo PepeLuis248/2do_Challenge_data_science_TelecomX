@@ -9,11 +9,11 @@ El objetivo principal es anticiparse a la pérdida de clientes, permitiendo a la
 La cancelación de clientes representa una pérdida directa de ingresos.
 Identificar quiénes están en riesgo de abandonar permite:
 
-    #• Reducir el churn
+      Reducir el churn
 
-    #• Optimizar campañas de retención
+      Optimizar campañas de retención
 
-    #• Aumentar el valor del cliente a largo plazo (LTV)
+      Aumentar el valor del cliente a largo plazo (LTV)
 
 🧠 Enfoque del Proyecto
 Se desarrolló un pipeline completo de Data Science que incluye:
