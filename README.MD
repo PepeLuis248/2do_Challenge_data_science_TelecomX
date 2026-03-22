@@ -1,112 +1,111 @@
-TelecomX2: Predicción de Cancelación (Churn)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Desarrollar modelos predictivos capaces de prever qué clientes tienen mayor probabilidad de cancelar sus servicios.
+🚀 TelecomX2: Predicción de Cancelación de Clientes (Churn)
+📌 Descripción del Proyecto
+En este proyecto desarrollé un modelo de Machine Learning capaz de predecir qué clientes tienen mayor probabilidad de cancelar sus servicios (Churn) en una empresa de telecomunicaciones.
+El objetivo principal es anticiparse a la pérdida de clientes, permitiendo a la empresa tomar decisiones estratégicas basadas en datos para mejorar la retención.
 
-La empresa quiere anticiparse al problema de la cancelación, y te corresponde a ti construir un pipeline robusto para esta etapa inicial de modelado.
+🎯 Problema de Negocio
+La cancelación de clientes representa una pérdida directa de ingresos.
+Identificar quiénes están en riesgo de abandonar permite:
+    • Reducir el churn
+    • Optimizar campañas de retención
+    • Aumentar el valor del cliente a largo plazo (LTV)
 
-Crear una conclusión estratégica señalando los principales factores que influyen en la cancelación.
+🧠 Enfoque del Proyecto
+Se desarrolló un pipeline completo de Data Science que incluye:
+    • Limpieza y preparación de datos
+    • Análisis exploratorio (EDA)
+    • Feature Engineering
+    • Balanceo de clases
+    • Entrenamiento de modelos
+    • Evaluación y selección del modelo óptimo
 
-Para desarrollar un modelo predictivo capaz de prever que clientes tienen mayor probabilidad de cancelar sus compras o sus pagos; he realizado un exhaustivo estudio de un recorrido por todos los posibles métodos de valuación y evolución de los modelos para encontrar el modelo predictivo que mejor analize datos, identifique patrones y tendencias, tomar decisiones informadas, utilizando el archivo datos_TelecomX_Fla.json del Challenges TelecomX1. Dado que la variable objetivo es Churn (abandono del cliente, es binaria), este es un problema de clasificación binaria. Se pueden aplicar los siguientes modelos como:
+📊 Dataset
+Se utilizó el dataset:
+📁 datos_TelecomX_Fla.json
+Contiene información sobre:
+    • Datos demográficos
+    • Servicios contratados
+    • Facturación
+    • Métodos de pago
+    • Estado de cancelación (Churn)
 
-Modelos clásicos de clasificación:
+⚙️ Tecnologías y Herramientas
+    • Python 🐍
+    • Pandas / NumPy
+    • Scikit-learn
+    • Imbalanced-learn (SMOTE)
+    • Matplotlib / Seaborn
+    • Jupyter Notebook / Google Colab
 
-1-Regresión logística (LogisticRegression)
+🤖 Modelos Implementados
+Se evaluaron múltiples algoritmos de clasificación:
+    • Regresión Logística
+    • Árbol de Decisión
+    • K-Nearest Neighbors (KNN)
+    • Support Vector Machines (SVM)
+    • Random Forest
 
-2-Árboles de decisión
+📈 Evaluación de Modelos
+Dado que el dataset está desbalanceado, se priorizaron métricas relevantes:
+    • ✅ Recall (Sensibilidad) (clave para detectar clientes en riesgo)
+    • Precision
+    • F1-score
+    • ROC AUC
+    • Matriz de confusión
+    • Curvas ROC y Precision-Recall
 
-3-K-Nearest Neighbors (KNN)
+🏆 Modelo Seleccionado (Champion)
+El modelo final fue seleccionado en base a su capacidad para:
+    • Maximizar el recall
+    • Detectar la mayor cantidad posible de clientes en riesgo
+    • Mantener un buen equilibrio con otras métricas
+📌 En problemas de churn, es más importante detectar clientes que se van que minimizar falsos positivos.
 
-4-SVM (Support Vector Machines)
+🔍 Insights Clave
+🔺 Factores que aumentan el churn
+    • Altos cargos mensuales
+    • Facturación electrónica
+    • Clientes con perfil digital
+    • Menor antigüedad
+🔻 Factores que reducen el churn
+    • Mayor tiempo como cliente (tenure) 🔥
+    • Contratos a largo plazo
+    • Pagos automáticos
+    • Servicios adicionales (soporte técnico, seguridad)
 
-5-RamdomForetClassifier
+💼 Impacto de Negocio
+Este modelo permite:
+    • Identificar clientes en riesgo de cancelación
+    • Diseñar campañas de retención personalizadas
+    • Reducir pérdidas económicas
+    • Mejorar la fidelización
 
-Métodos de valuación y evolución de los modelos.
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1-Validar el archivo del Challenges TelecomX1 acomodándolo para la valuación y evolución de los modelos de predicción.
+💡 Recomendaciones Estratégicas
+    • 🎯 Fidelizar clientes en los primeros meses
+    • 💳 Incentivar pagos automáticos
+    • 📉 Optimizar planes con altos costos
+    • 🔒 Ofrecer servicios de valor agregado
+    • 📊 Segmentar campañas según perfil del cliente
 
-2-Correlación de variables numéricas con Churn.
+📦 Cómo usar el modelo
+import joblib
 
-3-Comprobación de la exactitud de los modelos(accuracy)
+modelo = joblib.load('churn_model.pkl')
+prediccion = modelo.predict(nuevo_cliente)
 
-4-Validando los modelos.
+🚀 Storytelling del Proyecto
+Las empresas de telecomunicaciones enfrentan un problema constante: los clientes se van.
+Pero… ¿y si pudiéramos predecirlo antes de que ocurra?
+En este proyecto transformé datos en decisiones.
+Analicé el comportamiento de miles de clientes, identifiqué patrones ocultos y construí un modelo capaz de anticipar el churn.
+El resultado no es solo un modelo predictivo, sino una herramienta estratégica que permite actuar antes de perder al cliente.
 
-5-Matriz de confusión.
+📌 Próximos pasos
+    • Implementación en producción (API / Dashboard)
+    • Monitoreo del modelo
+    • Actualización periódica con nuevos datos
 
-6-Curva ROC.
-
-7-Curva de precisión vs sensibilidad.
-
-8-Informe de métricas.
-
-9-Validación cruzada.
-
-10-Validación cruzada con sensibilidad.
-
-11-Stratfield Kfold Estratificando los datos.
-
-12-Oversampling Balanceo de datos.
-
-13-Pipeline para validación.
-
-14-Undersampling.
-
-15-Optimización hiperparámetros.
-
-16-Insights Finales Basados en la Correlación con Churn
-
-Insights Finales Basados en la Correlación con Churn
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Factores que Aumentan la Probabilidad de Cancelación
-
-1. Altos Cargos Mensuales (`Charges.Monthly`):  
-   Clientes con facturas mensuales más altas tienden a cancelar más, posiblemente por una percepción de bajo valor en relación al costo.
-
-2. Facturación Electrónica (`PaperlessBilling`):  
-   Los usuarios que reciben facturación digital presentan mayor churn. Esto puede estar vinculado a perfiles más jóvenes y digitales, propensos a cambiar de proveedor.
-
-3. Adultos Mayores (`SeniorCitizen`):  
-   Ligeramente más propensos a cancelar, probablemente por ingresos fijos o menor afinidad con servicios tecnológicos.
-
-4. Servicios de Streaming (`StreamingTV` / `StreamingMovies`):
-   Tener estos servicios no garantiza permanencia. Puede reflejar usuarios exigentes o acostumbrados a comparar.
-
-5. Múltiples Líneas (`MultipleLines`):
-   No se asocia fuertemente con retención. Tal vez sea un servicio fácilmente reemplazable por promociones de la competencia.
-
----
-
-Factores que Disminuyen la Probabilidad de Cancelación
-
-1. Antigüedad del Cliente (`tenure`):
-   A mayor tiempo con la empresa, menor es la probabilidad de baja. Es fundamental trabajar la retención en los primeros meses.
-
-2. Tipo de Contrato (`Contract`): 
-   Contratos a plazo fijo (anual, bianual) reducen significativamente el churn. Indican compromiso y fidelidad.
-
-3. Tipo de Internet (`InternetService`):  
-   Servicios con mejor calidad (como fibra óptica) están asociados con menor churn. La calidad del servicio es clave.
-
-4. Método de Pago (`PaymentMethod`): 
-   Métodos como débito automático muestran menor tasa de cancelación. Indican estabilidad financiera o menor fricción.
-
-5. Gasto Total (`Charges.Total`):
-   Quienes ya invirtieron más en la empresa tienden a quedarse. Esto puede deberse al “efecto inversión”.
-
-6. Servicios de Valor Agregado (`OnlineSecurity`, `TechSupport`): 
-   Mejoran la percepción de calidad y satisfacción, favoreciendo la retención.
-
-7. Vínculos Personales (`Partner`, `Dependents`,): 
-   Clientes con familia o pareja tienen menor churn, posiblemente por mayor estabilidad o decisiones compartidas.
-
----
-
-Recomendaciones Estratégicas
-  Fidelizar a nuevos clientes durante los primeros meses, con beneficios personalizados o atención diferencial.
-- Promover contratos a largo plazo con descuentos, promociones exclusivas o mejoras en el servicio.
-- Fomentar métodos de pago automáticos, ofreciendo incentivos para reducir cancelaciones por olvido o problemas administrativos.
-- Detectar clientes con altos cargos mensuales y ofrecerles mejoras o bonificaciones personalizadas.
-- Ofrecer servicios de valor agregado, como seguridad en línea o soporte técnico premium, como herramientas de fidelización.
-- Segmentar campañas de retención según tipo de cliente (edad, perfil digital, estado civil, presencia de dependientes).
-
+👨‍💻 Autor: José Luis Planes
+Proyecto desarrollado como parte de un desafío de Data Science aplicado a negocio.
 
 
