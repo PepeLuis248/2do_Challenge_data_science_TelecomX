@@ -1,19 +1,14 @@
 🚀 TelecomX2: Predicción de Cancelación de Clientes (Churn)
-
 📌 Descripción del Proyecto
-
 En este proyecto desarrollé un modelo de Machine Learning capaz de predecir qué clientes tienen mayor probabilidad de cancelar sus servicios (Churn) en una empresa de telecomunicaciones.
 El objetivo principal es anticiparse a la pérdida de clientes, permitiendo a la empresa tomar decisiones estratégicas basadas en datos para mejorar la retención.
 
 🎯 Problema de Negocio
 La cancelación de clientes representa una pérdida directa de ingresos.
 Identificar quiénes están en riesgo de abandonar permite:
-
-      Reducir el churn
-
-      Optimizar campañas de retención
-
-      Aumentar el valor del cliente a largo plazo (LTV)
+    • Reducir el churn
+    • Optimizar campañas de retención
+    • Aumentar el valor del cliente a largo plazo (LTV)
 
 🧠 Enfoque del Proyecto
 Se desarrolló un pipeline completo de Data Science que incluye:
@@ -110,7 +105,7 @@ El resultado no es solo un modelo predictivo, sino una herramienta estratégica 
     • Monitoreo del modelo
     • Actualización periódica con nuevos datos
 
-👨‍💻 Autor: José Luis Planes
+👨‍💻 Autor
 Proyecto desarrollado como parte de un desafío de Data Science aplicado a negocio.
 
 
